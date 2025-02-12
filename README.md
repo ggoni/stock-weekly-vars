@@ -1,4 +1,4 @@
-# Stock Daily Variation Z-Score Calculator
+# Stock weekly Variation Z-Score Calculator
 
 A Python tool that calculates z-scores for stock price variations, helping identify unusual price movements in the market.
 
@@ -17,7 +17,7 @@ This script calculates the weekly price variation z-scores for any given stock t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/stock-daily-vars
+   git clone [https://github.com/ggoni/stock-weekly-vars)](https://github.com/ggoni/stock-weekly-vars)
    ```
 
 2. Create and activate a virtual environment:
@@ -53,11 +53,11 @@ This script calculates the weekly price variation z-scores for any given stock t
 Example output:
 
 ```bash
-Stock Daily Variation Z-Score Calculator
+Stock weekly Variation Z-Score Calculator
 Enter stock tickers separated by commas (e.g., AAPL, MSFT, GOOGL):
 AAPL, MSFT
 
-Calculating z-scores for daily price variations...
+Calculating z-scores for weekly price variations...
 --------------------------------------------------
 
 AAPL: 0.81
