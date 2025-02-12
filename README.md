@@ -17,7 +17,7 @@ This script calculates the weekly price variation z-scores for any given stock t
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/ggoni/stock-weekly-vars)](https://github.com/ggoni/stock-weekly-vars)
+   git clone https://github.com/ggoni/stock-weekly-vars
    ```
 
 2. Create and activate a virtual environment:
