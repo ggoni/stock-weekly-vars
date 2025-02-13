@@ -62,4 +62,80 @@ Calculating z-scores for weekly price variations...
 
 AAPL: 0.81
 MSFT: -0.1
-````
+```
+
+# Stock Z-Score Calculator API
+
+## API Usage
+
+The API provides endpoints to calculate weekly price variation z-scores for stocks.
+
+### Running the API
+
+Start the API server using either of these methods:
+
+```bash
+# Method 1: Direct Python execution
+python api.py
+
+# Method 2: Using uvicorn (recommended for development)
+uvicorn api:app --reload
+```
+
+The API will be available at http://localhost:8000
+
+### Using the API
+
+There are several ways to interact with the API:
+
+1. **Using Python requests**:
+```python
+import requests
+
+url = 'http://localhost:8000/calculate-zscores'
+payload = {
+    'tickers': ['AAPL', 'MSFT', 'GOOGL'],
+    'period': '5y'
+}
+
+response = requests.post(url, json=payload)
+print(response.json())
+```
+
+2. **Using cURL**:
+```bash
+curl -X POST 'http://localhost:8000/calculate-zscores' \\
+     -H 'Content-Type: application/json' \\
+     -d '{\"tickers\": [\"AAPL\", \"MSFT\", \"GOOGL\"], \"period\": \"5y\"}'
+```
+
+3. **Using Swagger UI**:
+- Open http://localhost:8000/docs in your browser
+- Click on the POST /calculate-zscores endpoint
+- Click 'Try it out'
+- Input your request and click 'Execute'
+
+### API Parameters
+
+- `tickers`: List of stock ticker symbols (e.g., ['AAPL', 'MSFT'])
+- `period`: Time period for analysis (optional, default: '5y')
+  - Available options: '1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'
+
+### Example Response
+
+```json
+[
+    {
+        "ticker": "AAPL",
+        "zscore": 0.75
+    },
+    {
+        "ticker": "MSFT",
+        "zscore": 1.23
+    },
+    {
+        "ticker": "GOOGL",
+        "zscore": -0.45
+    }
+]
+```
