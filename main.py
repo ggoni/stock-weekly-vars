@@ -30,14 +30,14 @@ def get_stock_zscore(ticker, period="5y"):
 
 
 def main():
-    print("Stock Daily Variation Z-Score Calculator")
+    print("Stock weekly variation Z-Score Calculator")
     print("Enter stock tickers separated by commas (e.g., AAPL, MSFT, GOOGL):")
 
     # Collect tickers from user
     ticker_input = input().strip()
     tickers = [t.strip().upper() for t in ticker_input.split(',')]
 
-    print("\nCalculating z-scores for daily price variations...")
+    print("\nCalculating z-scores for weekly price variations...")
     print("-" * 50)
 
     # Calculate and display z-scores for each ticker
