@@ -26,7 +26,8 @@ def get_stock_zscore(ticker, period="5y"):
 
         return round(latest_zscore, 2)
     except Exception as e:
-        return f"Error fetching data for {ticker}: {str(e)}"
+        print(f"Error fetching data for {ticker}: {str(e)}")
+        return None
 
 
 def main():

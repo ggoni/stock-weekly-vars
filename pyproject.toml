@@ -1,7 +1,7 @@
 [project]
 name = "stock-daily-vars"
 version = "0.1.0"
-description = "Add your description here"
+description = "Download stock weekly variations using yfinance"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
