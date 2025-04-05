@@ -1,0 +1,1 @@
+daily_returns = daily_data.pct_change(fill_method=None).dropna() 

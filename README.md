@@ -139,3 +139,9 @@ curl -X POST 'http://localhost:8000/calculate-zscores' \\
     }
 ]
 ```
+
+## Bash editors from TIKR
+
+```bash
+cut -f1 tickers-250405.md | paste -s -d ',' -
+```
